@@ -32,6 +32,7 @@ git-patch-prop-local.sh
 .mvn/
 mvnw
 mvnw.cmd
+db/dir/node00-f9060559-60fc-44e1-b4b6-c29314f89127/*
 
 #Ignore all Intellij IDEA files (except default inspections config)
 .idea/
