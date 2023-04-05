@@ -1,0 +1,13 @@
+// ------------------------------------------------------------------
+// List of ignite-ssh module's dependencies provided as a part of this distribution
+// which licenses differ from Apache Software License.
+// ------------------------------------------------------------------
+
+==============================================================================
+For JSch (http://www.jcraft.com/jsch/) com.jcraft:jsch:jar:0.1.54
+==============================================================================
+This product bundles JSch which is available under a:
+Revised BSD. For details, see http://www.jcraft.com/jsch/LICENSE.txt.
+
+
+

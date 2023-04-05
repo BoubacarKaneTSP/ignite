@@ -1,0 +1,19 @@
+// ------------------------------------------------------------------
+// List of ignite-visor-console module's dependencies provided as a part of this distribution
+// which licenses differ from Apache Software License.
+// ------------------------------------------------------------------
+
+==============================================================================
+For JLine (http://nexus.sonatype.org/oss-repository-hosting.html/jline) jline:jline:jar:2.12.1
+==============================================================================
+This product bundles JLine which is available under a:
+The BSD License. For details, see http://www.opensource.org/licenses/bsd-license.php.
+
+==============================================================================
+For Scala Library (http://www.scala-lang.org/) org.scala-lang:scala-library:jar:2.11.12
+==============================================================================
+This product bundles Scala Library which is available under a:
+BSD 3-Clause. For details, see http://www.scala-lang.org/license.html.
+
+
+

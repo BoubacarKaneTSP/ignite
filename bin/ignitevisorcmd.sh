@@ -63,7 +63,7 @@ setIgniteHome
 # Set IGNITE_LIBS.
 #
 . "${SCRIPTS_HOME}"/include/setenv.sh
-. "${SCRIPTS_HOME}"/include/build-classpath.sh # Will be removed in the binary release.
+
 CP="${IGNITE_HOME}/bin/include/visor-common/*${SEP}${IGNITE_HOME}/bin/include/visorcmd/*${SEP}${IGNITE_LIBS}"
 
 #
@@ -71,7 +71,7 @@ CP="${IGNITE_HOME}/bin/include/visor-common/*${SEP}${IGNITE_HOME}/bin/include/vi
 #
 # ADD YOUR/CHANGE ADDITIONAL OPTIONS HERE
 #
-JVM_OPTS="-Xms1g -Xmx1g -XX:MaxPermSize=128M -server ${JVM_OPTS}"
+JVM_OPTS="-Xms1g -Xmx1g -server ${JVM_OPTS}"
 
 # Mac OS specific support to display correct name in the dock.
 osname=`uname`
@@ -89,7 +89,7 @@ fi
 # Assertions are disabled by default since version 3.5.
 # If you want to enable them - set 'ENABLE_ASSERTIONS' flag to '1'.
 #
-ENABLE_ASSERTIONS="1"
+ENABLE_ASSERTIONS="0"
 
 #
 # Set '-ea' options if assertions are enabled.
@@ -126,12 +126,12 @@ JVM_OPTS=$(getJavaSpecificOpts $version "$JVM_OPTS")
 case $osname in
     Darwin*)
         "$JAVA" ${JVM_OPTS} ${QUIET} "${DOCK_OPTS}" \
-        -DIGNITE_UPDATE_NOTIFIER=false -DIGNITE_HOME="${IGNITE_HOME}" -DIGNITE_PROG_NAME="$0" \
+         -DIGNITE_HOME="${IGNITE_HOME}" -DIGNITE_PROG_NAME="$0" \
         -DIGNITE_DEPLOYMENT_MODE_OVERRIDE=ISOLATED ${JVM_XOPTS} -cp "${CP}" \
         org.apache.ignite.visor.commands.VisorConsole ${ARGS}
     ;;
     *)
-        "$JAVA" ${JVM_OPTS} ${QUIET} -DIGNITE_UPDATE_NOTIFIER=false \
+        "$JAVA" ${JVM_OPTS} ${QUIET}  \
         -DIGNITE_HOME="${IGNITE_HOME}" -DIGNITE_PROG_NAME="$0" -DIGNITE_DEPLOYMENT_MODE_OVERRIDE=ISOLATED \
         ${JVM_XOPTS} -cp "${CP}" \
         org.apache.ignite.visor.commands.VisorConsole ${ARGS}

@@ -114,7 +114,7 @@ if "%OS%" == "Windows_NT" set PROG_NAME=%~nx0%
 :: Set IGNITE_LIBS
 ::
 call "%SCRIPTS_HOME%\include\setenv.bat"
-call "%SCRIPTS_HOME%\include\build-classpath.bat" &:: Will be removed in the binary release.
+
 set CP=%IGNITE_HOME%\bin\include\visor-common\*;%IGNITE_HOME%\bin\include\visorcmd\*;%IGNITE_LIBS%
 
 ::
@@ -131,7 +131,7 @@ if %ERRORLEVEL% neq 0 (
 ::
 :: ADD YOUR/CHANGE ADDITIONAL OPTIONS HERE
 ::
-if "%JVM_OPTS_VISOR%" == "" set JVM_OPTS_VISOR=-Xms1g -Xmx1g -XX:MaxPermSize=128M
+if "%JVM_OPTS_VISOR%" == "" set JVM_OPTS_VISOR=-Xms1g -Xmx1g
 
 ::
 :: Uncomment to set preference to IPv4 stack.
@@ -142,7 +142,7 @@ if "%JVM_OPTS_VISOR%" == "" set JVM_OPTS_VISOR=-Xms1g -Xmx1g -XX:MaxPermSize=128
 :: Assertions are disabled by default since version 3.5.
 :: If you want to enable them - set 'ENABLE_ASSERTIONS' flag to '1'.
 ::
-set ENABLE_ASSERTIONS=1
+set ENABLE_ASSERTIONS=0
 
 ::
 :: Set '-ea' options if assertions are enabled.
