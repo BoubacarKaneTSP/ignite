@@ -4,7 +4,8 @@ import os
 YCSB_file_name = sys.argv[1]
 flag_avg = sys.argv[2]
 nb_client = sys.argv[3]
-list_args = sys.argv[4:len(sys.argv)]
+load_run_flag = sys.argv[4]
+list_args = sys.argv[5:len(sys.argv)]
 
 
 
@@ -17,8 +18,8 @@ if flag_avg == "True":
         for arg in list_args:
             arg0 = arg.split("-")[0]
             arg1 = arg.split("-")[1]
-            file_name = "YCSB_"+arg0+"_"+arg1+"_"+nb+"_clients.txt"
-            file_name_avg = "YCSB_"+arg0+"_"+arg1+".txt"
+            file_name = "YCSB_"+load_run_flag+"_"+arg0+"_"+arg1+"_"+nb+"_clients.txt"
+            file_name_avg = "YCSB_"+load_run_flag+"_"+arg0+"_"+arg1+".txt"
 
             file = open(file_name, "r")
 
@@ -54,7 +55,7 @@ else:
 
             arg0 = arg.split("-")[0]
             arg1 = arg.split("-")[1]
-            file_name = "YCSB_"+arg0+"_"+arg1+"_"+nb_client+"_clients.txt"
+            file_name = "YCSB_"+load_run_flag+"_"+arg0+"_"+arg1+"_"+nb_client+"_clients.txt"
 
             if arg0 in line and arg1 in line:
 
