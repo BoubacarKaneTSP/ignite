@@ -3,8 +3,8 @@ import os
 
 YCSB_file_name = sys.argv[1]
 flag_avg = sys.argv[2]
-nb_client = sys.argv[3]
-load_run_flag = sys.argv[4]
+load_run_flag = sys.argv[3]
+nb_client = sys.argv[4]
 list_args = sys.argv[5:len(sys.argv)]
 
 
@@ -42,9 +42,6 @@ if flag_avg == "True":
             file_avg.close()
 
             os.remove(file_name)
-            
-
-    
 else:
 
     file_read = open(YCSB_file_name, "r")
