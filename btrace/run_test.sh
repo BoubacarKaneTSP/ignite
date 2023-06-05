@@ -4,7 +4,7 @@
 trap "pkill -KILL -P $$; exit 255" SIGINT SIGTERM
 trap "trap - SIGTERM && kill -- -$$" SIGINT SIGTERM EXIT
 
-nbTest=5
+nbTest=10
 clients="1 2 4 8 16 32 48 96"
 list_stat="OVERALL-RunTime OVERALL-Throughput"
 hosts="127.0.0.1"
