@@ -26,7 +26,7 @@ import java.util.concurrent.atomic.LongAdder;
 import org.apache.ignite.internal.util.GridCircularBuffer;
 import org.apache.ignite.internal.util.typedef.internal.U;
 import org.apache.ignite.testframework.junits.common.GridCommonAbstractTest;
-import org.apache.ignite.util.deque.FastSizeDeque;
+import org.apache.ignite.util.deque.NotFastSizeDeque;
 import org.junit.Test;
 
 /**
@@ -79,7 +79,7 @@ public class GridCircularBufferPerformanceTest extends GridCommonAbstractTest {
     @Test
     public void testDequeueThroughput() throws Exception {
 
-        final FastSizeDeque<Integer> buf = new FastSizeDeque<>(new ConcurrentLinkedDeque<>());
+        final NotFastSizeDeque<Integer> buf = new NotFastSizeDeque<>(new ConcurrentLinkedDeque<>());
         final LongAdder cnt = new LongAdder();
         final AtomicBoolean finished = new AtomicBoolean();
 

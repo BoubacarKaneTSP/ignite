@@ -30,7 +30,7 @@ import org.apache.ignite.internal.processors.timeout.GridTimeoutProcessor;
 import org.apache.ignite.internal.util.lang.GridPlainRunnable;
 import org.apache.ignite.internal.util.typedef.internal.U;
 import org.apache.ignite.lang.IgniteUuid;
-import org.apache.ignite.util.deque.FastSizeDeque;
+import org.apache.ignite.util.deque.NotFastSizeDeque;
 
 /**
  *
@@ -119,7 +119,7 @@ public abstract class GridDeferredAckMessageSender<T> {
         private AtomicBoolean guard = new AtomicBoolean(false);
 
         /** Versions. */
-        private FastSizeDeque<T> vers = new FastSizeDeque<>(new ConcurrentLinkedDeque<>());
+        private NotFastSizeDeque<T> vers = new NotFastSizeDeque<>(new ConcurrentLinkedDeque<>());
 
         /** Node ID. */
         private final UUID nodeId;

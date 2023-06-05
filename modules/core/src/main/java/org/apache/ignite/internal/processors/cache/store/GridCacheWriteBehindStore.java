@@ -49,7 +49,7 @@ import org.apache.ignite.lang.IgniteBiInClosure;
 import org.apache.ignite.lang.IgniteBiTuple;
 import org.apache.ignite.lifecycle.LifecycleAware;
 import org.apache.ignite.thread.IgniteThread;
-import org.apache.ignite.util.deque.FastSizeDeque;
+import org.apache.ignite.util.deque.NotFastSizeDeque;
 import org.jetbrains.annotations.Nullable;
 import org.jsr166.ConcurrentLinkedHashMap;
 
@@ -945,7 +945,7 @@ public class GridCacheWriteBehindStore<K, V> implements CacheStore<K, V>, Lifecy
      */
     private class Flusher extends GridWorker {
         /** Queue to flush. */
-        private final FastSizeDeque<IgniteBiTuple<K, StatefulValue<K, V>>> queue;
+        private final NotFastSizeDeque<IgniteBiTuple<K, StatefulValue<K, V>>> queue;
 
         /** Flusher write map. */
         private final ConcurrentHashMap<K, StatefulValue<K, V>> flusherWriteMap;
@@ -983,7 +983,7 @@ public class GridCacheWriteBehindStore<K, V> implements CacheStore<K, V>, Lifecy
                 flusherWriteMap = null;
             }
             else {
-                queue = new FastSizeDeque<>(new ConcurrentLinkedDeque<>());
+                queue = new NotFastSizeDeque<>(new ConcurrentLinkedDeque<>());
                 flusherWriteMap = new ConcurrentHashMap<>(initCap, 0.75f, concurLvl);
             }
         }

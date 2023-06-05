@@ -33,7 +33,7 @@ import org.jetbrains.annotations.NotNull;
  *
  * @param <E> Deque element type
  */
-public class FastSizeDeque<E> implements Deque<E> {
+public class NotFastSizeDeque<E> implements Deque<E> {
 
     /** */
     private class Iter implements Iterator<E> {
@@ -78,7 +78,7 @@ public class FastSizeDeque<E> implements Deque<E> {
      *
      * @param deque Deque being decorated.
      */
-    public FastSizeDeque(Deque<E> deque) {
+    public NotFastSizeDeque(Deque<E> deque) {
         this.deque = Objects.requireNonNull(deque);
     }
 

@@ -34,7 +34,7 @@ import org.apache.ignite.internal.processors.tracing.MTC;
 import org.apache.ignite.internal.util.tostring.GridToStringExclude;
 import org.apache.ignite.internal.util.typedef.internal.LT;
 import org.apache.ignite.internal.util.typedef.internal.S;
-import org.apache.ignite.util.deque.FastSizeDeque;
+import org.apache.ignite.util.deque.NotFastSizeDeque;
 import org.jetbrains.annotations.Nullable;
 
 import static org.apache.ignite.internal.processors.tracing.messages.TraceableMessagesTable.traceName;
@@ -48,7 +48,7 @@ import static org.apache.ignite.internal.util.nio.GridNioServer.OUTBOUND_MESSAGE
  */
 public class GridSelectorNioSessionImpl extends GridNioSessionImpl implements GridNioKeyAttachment {
     /** Pending write requests. */
-    private final FastSizeDeque<SessionWriteRequest> queue = new FastSizeDeque<>(new ConcurrentLinkedDeque<>());
+    private final NotFastSizeDeque<SessionWriteRequest> queue = new NotFastSizeDeque<>(new ConcurrentLinkedDeque<>());
 
     /** Selection key associated with this session. */
     @GridToStringExclude
