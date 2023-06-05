@@ -38,6 +38,8 @@ if [ "${IGNITE_HOME:-}" = "" ];
     else IGNITE_HOME_TMP=${IGNITE_HOME};
 fi
 
+echo $IGNITE_HOME_TMP
+
 #
 # Set SCRIPTS_HOME - base path to scripts.
 #
