@@ -37,17 +37,29 @@
 
         <property name="dataStorageConfiguration">
             <bean class="org.apache.ignite.configuration.DataStorageConfiguration">
+<<<<<<< HEAD
                 <property name="walMode" value="LOG_ONLY"/>
 		<property name="storagePath" value="$IGNITE_HOME/db/dir"/>
 		<property name="walPath" value="$IGNITE_HOME/wal/dir"/>
 		<property name="walArchivePath" value="$IGNITE_HOME/walArch/dir"/>
                 <property name="walHistorySize" value="1"/>
+=======
+                <property name="walMode" value="NONE"/>
+                <property name="storagePath" value="/home/kaneb/ApacheProject/ignite/db/dir"/>
+                <property name="walPath" value="/home/kaneb/ApacheProject/ignite/wal/dir"/>
+                <property name="walArchivePath" value="/home/kaneb/ApacheProject/ignite/walArch/dir"/>
+                <property name="walHistorySize" value="1000000"/>
+>>>>>>> test
                 <property name="metricsEnabled" value="true"/>
 
                 <property name="defaultDataRegionConfiguration">
                     <bean class="org.apache.ignite.configuration.DataRegionConfiguration">
                         <property name="name" value="default_data_region"/>
+<<<<<<< HEAD
                         <property name="persistenceEnabled" value="true"/>
+=======
+                        <property name="persistenceEnabled" value="false"/>
+>>>>>>> test
                         <!-- Setting the max size of the default region to 10GB. -->
                         <property name="maxSize" value="#{10L * 1024 * 1024 * 1024}"/>
                         <!-- Setting the initial size of the default region to 10GB. -->
@@ -72,7 +84,12 @@
             </list>
         </property>
 
+<<<<<<< HEAD
 	<!-- Explicitly configure TCP discovery SPI to provide list of initial nodes. -->
+=======
+
+    <!-- Explicitly configure TCP discovery SPI to provide list of initial nodes.
+>>>>>>> test
     <property name="discoverySpi">
         <bean class="org.apache.ignite.spi.discovery.tcp.TcpDiscoverySpi">
             <property name="ipFinder">
@@ -80,14 +97,21 @@
                 <bean class="org.apache.ignite.spi.discovery.tcp.ipfinder.vm.TcpDiscoveryVmIpFinder">
                     <property name="addresses">
                         <list>
+<<<<<<< HEAD
                             <!--The list of hosts includes client host. -->
 			    <value>127.0.0.1:47500..47509</value> 
+=======
+>>>>>>> test
                         </list>
                     </property>
                 </bean>
             </property>
         </bean>
+<<<<<<< HEAD
     </property>
 
+=======
+</property> -->
+>>>>>>> test
 </bean>
 </beans>
