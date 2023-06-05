@@ -19,14 +19,14 @@ package org.apache.ignite.internal.processors.continuous;
 
 import java.util.Collection;
 import java.util.concurrent.ConcurrentLinkedDeque;
-import org.apache.ignite.util.deque.NotFastSizeDeque;
+import org.apache.ignite.util.deque.FastSizeDeque;
 
 /**
  * Continuous routine batch adapter.
  */
 public class GridContinuousBatchAdapter implements GridContinuousBatch {
     /** Buffer. */
-    protected final NotFastSizeDeque<Object> buf = new NotFastSizeDeque<>(new ConcurrentLinkedDeque<>());
+    protected final FastSizeDeque<Object> buf = new FastSizeDeque<>(new ConcurrentLinkedDeque<>());
 
     /** {@inheritDoc} */
     @Override public void add(Object obj) {

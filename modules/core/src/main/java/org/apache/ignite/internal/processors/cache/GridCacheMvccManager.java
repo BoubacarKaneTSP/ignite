@@ -67,7 +67,7 @@ import org.apache.ignite.internal.util.typedef.internal.U;
 import org.apache.ignite.lang.IgniteFuture;
 import org.apache.ignite.lang.IgnitePredicate;
 import org.apache.ignite.lang.IgniteUuid;
-import org.apache.ignite.util.deque.NotFastSizeDeque;
+import org.apache.ignite.util.deque.FastSizeDeque;
 import org.jetbrains.annotations.Nullable;
 
 import static org.apache.ignite.IgniteSystemProperties.IGNITE_MAX_NESTED_LISTENER_CALLS;
@@ -129,7 +129,7 @@ public class GridCacheMvccManager extends GridCacheSharedManagerAdapter {
     private final ConcurrentMap<GridCacheVersion, GridCacheVersion> near2dht = newMap();
 
     /** Finish futures. */
-    private final NotFastSizeDeque<FinishLockFuture> finishFuts = new NotFastSizeDeque<>(new ConcurrentLinkedDeque<>());
+    private final FastSizeDeque<FinishLockFuture> finishFuts = new FastSizeDeque<>(new ConcurrentLinkedDeque<>());
 
     /** Nested listener calls. */
     private final ThreadLocal<Integer> nestedLsnrCalls = new ThreadLocal<Integer>() {
