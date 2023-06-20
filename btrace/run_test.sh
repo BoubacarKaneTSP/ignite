@@ -4,12 +4,13 @@
 trap "pkill -KILL -P $$; exit 255" SIGINT SIGTERM
 trap "trap - SIGTERM && kill -- -$$" SIGINT SIGTERM EXIT
 
-nbTest=10
-clients="1 2 4 8 16 32 48 96"
+nbTest=3
+clients="1 10 20 30 40 50 60 70 80 90 100 110 120 130 140 150 160 170 180 190 200"
+#clients="1 2 4 8 16 32 48 96"
 list_stat="OVERALL-RunTime OVERALL-Throughput"
 hosts="127.0.0.1"
 workload="workloada"
-operationcount=1000000
+operationcount=10000000
 recordcount=1000000
 output_file_load="outputload.txt"
 output_file_run="outputrun.txt"
@@ -19,9 +20,16 @@ cd $YCSB_HOME
 
 for (( c=1; c<=nbTest; c++ ))
 do
-  for nb_client in 1 2 4 8 16 32 48 96
+  for nb_client in 1 10 20 30 40 50 60 70 80 90 100 110 120 130 140 150 160 170 180 190 200
+  #for nb_client in 1 2 4 8 16 32 48 96
   do
-    # echo "$YCSB_HOME/bin/ycsb load ignite -p hosts=$hosts -s -P $YCSB_HOME/workloads/$workload -threads $nb_client -p operationcount=$operationcount -p recordcount=$recordcount > $IGNITE_HOME/$output_file_load"
+
+
+    echo " "
+    echo " "
+    echo "====> test num [$c] with [$nb_client] client(s)"
+    echo " "
+    echo " "
     python2 $YCSB_HOME/bin/ycsb load ignite -p hosts=$hosts -s -P $YCSB_HOME/workloads/$workload -threads $nb_client -p operationcount=$operationcount -p recordcount=$recordcount > $IGNITE_HOME/$output_file_load
     python3 $IGNITE_HOME/btrace/analyse_YCSB.py $IGNITE_HOME/$output_file_load False load $nb_client $list_stat
 
