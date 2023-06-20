@@ -59,7 +59,7 @@ public class FastSizeDeque<E> implements Deque<E> {
         @Override public void remove() {
             iter.remove();
 
-            adder.decrement();
+//            adder.decrement();
         }
 
         /** {@inheritDoc} */
@@ -72,7 +72,7 @@ public class FastSizeDeque<E> implements Deque<E> {
     private final Deque<E> deque;
 
     /** Size. */
-    private final LongAdder adder = new LongAdder();
+//    private final LongAdder adder = new LongAdder();
 
     /** Creates a decorator.
      *
@@ -88,7 +88,8 @@ public class FastSizeDeque<E> implements Deque<E> {
      * @return Deque size.
      */
     public int sizex() {
-        return adder.intValue();
+//        return adder.intValue();
+        return deque.size();
     }
 
     /**
@@ -97,29 +98,30 @@ public class FastSizeDeque<E> implements Deque<E> {
      * @return {@code True} if this deque is empty.
      */
     public boolean isEmptyx() {
-        return adder.intValue() == 0;
+        return deque.isEmpty();
+//        return adder.intValue() == 0;
     }
 
     /** {@inheritDoc} */
     @Override public void addFirst(E e) {
         deque.addFirst(e);
 
-        adder.increment();
+//        adder.increment();
     }
 
     /** {@inheritDoc} */
     @Override public void addLast(E e) {
         deque.addLast(e);
 
-        adder.increment();
+//        adder.increment();
     }
 
     /** {@inheritDoc} */
     @Override public boolean offerFirst(E e) {
         boolean res = deque.offerFirst(e);
 
-        if (res)
-            adder.increment();
+//        if (res)
+//            adder.increment();
 
         return res;
     }
@@ -128,8 +130,8 @@ public class FastSizeDeque<E> implements Deque<E> {
     @Override public boolean offerLast(E e) {
         boolean res = deque.offerLast(e);
 
-        if (res)
-            adder.increment();
+//        if (res)
+//            adder.increment();
 
         return res;
     }
@@ -138,7 +140,7 @@ public class FastSizeDeque<E> implements Deque<E> {
     @Override public E removeFirst() {
         E res = deque.removeFirst();
 
-        adder.decrement();
+//        adder.decrement();
 
         return res;
     }
@@ -147,7 +149,7 @@ public class FastSizeDeque<E> implements Deque<E> {
     @Override public E removeLast() {
         E res = deque.removeLast();
 
-        adder.decrement();
+//        adder.decrement();
 
         return res;
     }
@@ -156,8 +158,8 @@ public class FastSizeDeque<E> implements Deque<E> {
     @Override public E pollFirst() {
         E res = deque.pollFirst();
 
-        if (res != null)
-            adder.decrement();
+//        if (res != null)
+//            adder.decrement();
 
         return res;
     }
@@ -166,8 +168,8 @@ public class FastSizeDeque<E> implements Deque<E> {
     @Override public E pollLast() {
         E res = deque.pollFirst();
 
-        if (res != null)
-            adder.decrement();
+//        if (res != null)
+//            adder.decrement();
 
         return res;
     }
@@ -196,8 +198,8 @@ public class FastSizeDeque<E> implements Deque<E> {
     @Override public boolean removeFirstOccurrence(Object o) {
         boolean res = deque.removeFirstOccurrence(o);
 
-        if (res)
-            adder.decrement();
+//        if (res)
+//            adder.decrement();
 
         return res;
     }
@@ -206,8 +208,8 @@ public class FastSizeDeque<E> implements Deque<E> {
     @Override public boolean removeLastOccurrence(Object o) {
         boolean res = deque.removeLastOccurrence(o);
 
-        if (res)
-            adder.decrement();
+//        if (res)
+//            adder.decrement();
 
         return res;
     }
@@ -216,7 +218,7 @@ public class FastSizeDeque<E> implements Deque<E> {
     @Override public boolean add(E e) {
         boolean alwaysTrue = deque.add(e);
 
-        adder.increment();
+//        adder.increment();
 
         return alwaysTrue;
     }
@@ -225,8 +227,8 @@ public class FastSizeDeque<E> implements Deque<E> {
     @Override public boolean offer(E e) {
         boolean res = deque.offer(e);
 
-        if (res)
-            adder.increment();
+        /*if (res)
+            adder.increment();*/
 
         return res;
     }
@@ -235,7 +237,7 @@ public class FastSizeDeque<E> implements Deque<E> {
     @Override public E remove() {
         E res = deque.remove();
 
-        adder.decrement();
+//        adder.decrement();
 
         return res;
     }
@@ -244,8 +246,8 @@ public class FastSizeDeque<E> implements Deque<E> {
     @Override public E poll() {
         E res = deque.poll();
 
-        if (res != null)
-            adder.decrement();
+        /*if (res != null)
+            adder.decrement();*/
 
         return res;
     }
@@ -264,14 +266,14 @@ public class FastSizeDeque<E> implements Deque<E> {
     @Override public void push(E e) {
         deque.push(e);
 
-        adder.increment();
+//        adder.increment();
     }
 
     /** {@inheritDoc} */
     @Override public E pop() {
         E res = deque.pop();
 
-        adder.decrement();
+//        adder.decrement();
 
         return res;
     }
@@ -280,8 +282,8 @@ public class FastSizeDeque<E> implements Deque<E> {
     @Override public boolean remove(Object o) {
         boolean res = deque.remove(o);
 
-        if (res)
-            adder.decrement();
+        /*if (res)
+            adder.decrement();*/
 
         return res;
     }
@@ -305,8 +307,8 @@ public class FastSizeDeque<E> implements Deque<E> {
 
         boolean res = deque.addAll(col);
 
-        if (res)
-            adder.add(colSize);
+/*        if (res)
+            adder.add(colSize);*/
 
         return res;
     }
