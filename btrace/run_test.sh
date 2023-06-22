@@ -5,7 +5,8 @@ trap "pkill -KILL -P $$; exit 255" SIGINT SIGTERM
 trap "trap - SIGTERM && kill -- -$$" SIGINT SIGTERM EXIT
 
 nbTest=3
-clients="1 10 20 30 40 50 60 70 80 90 100 110 120 130 140 150 160 170 180 190 200"
+#clients="1 10 20 30 40 50 60 70 80 90 100 110 120 130 140 150 160 170 180 190 200"
+clients="90 110 130 150 170 190 200"
 #clients="1 2 4 8 16 32 48 96"
 list_stat="OVERALL-RunTime OVERALL-Throughput"
 hosts="127.0.0.1"
@@ -20,7 +21,8 @@ cd $YCSB_HOME
 
 for (( c=1; c<=nbTest; c++ ))
 do
-  for nb_client in 1 10 20 30 40 50 60 70 80 90 100 110 120 130 140 150 160 170 180 190 200
+  #for nb_client in 1 10 20 30 40 50 60 70 80 90 100 110 120 130 140 150 160 170 180 190 200
+  for nb_client in 90 110 130 150 170 190 200
   #for nb_client in 1 2 4 8 16 32 48 96
   do
 
