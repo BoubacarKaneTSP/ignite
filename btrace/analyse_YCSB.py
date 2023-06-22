@@ -21,9 +21,10 @@ def calculate_bounds(values_func):
 
 YCSB_file_name = sys.argv[1]
 flag_avg = sys.argv[2]
-load_run_flag = sys.argv[3]
-nb_client = sys.argv[4]
-list_args = sys.argv[5:len(sys.argv)]
+flag_append = ys.argv[3]
+load_run_flag = sys.argv[4]
+nb_client = sys.argv[5]
+list_args = sys.argv[6:len(sys.argv)]
 
 
 if flag_avg == "True":
@@ -42,10 +43,7 @@ if flag_avg == "True":
 
             file = open(file_name, "r")
 
-            if nb == "1":
-                file_avg = open(file_name_avg, "w")
-            else:
-                file_avg = open(file_name_avg, "a")
+            file_avg = open(file_name_avg, flag_append)
 
             values = []
 
