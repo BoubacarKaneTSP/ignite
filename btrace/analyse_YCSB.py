@@ -21,7 +21,7 @@ def calculate_bounds(values_func):
 
 YCSB_file_name = sys.argv[1]
 flag_avg = sys.argv[2]
-flag_append = ys.argv[3]
+flag_append = sys.argv[3]
 load_run_flag = sys.argv[4]
 nb_client = sys.argv[5]
 list_args = sys.argv[6:len(sys.argv)]
