@@ -53,7 +53,7 @@ if flag_avg == "True":
 
             mean, upper_bound, lower_bound, max_value, min_value = calculate_bounds(values)
 
-            file_avg.write(nb + " " + str(mean) + " " + str(upper_bound)+ " " + str(lower_bound) + " " + max_value + " " + min_value + "\n")
+            file_avg.write(nb + " " + str(mean) + " " + str(upper_bound)+ " " + str(lower_bound) + " " + str(max_value) + " " + str(min_value) + "\n")
 
             file.close()
             file_avg.close()
