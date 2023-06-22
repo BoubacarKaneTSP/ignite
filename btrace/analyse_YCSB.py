@@ -21,11 +21,12 @@ def calculate_bounds(values_func):
 
 YCSB_file_name = sys.argv[1]
 flag_avg = sys.argv[2]
-flag_append = sys.argv[3]
+num_first_process = sys.argv[3]
 load_run_flag = sys.argv[4]
 nb_client = sys.argv[5]
 list_args = sys.argv[6:len(sys.argv)]
 
+flag_append = True
 
 if flag_avg == "True":
 
@@ -41,9 +42,11 @@ if flag_avg == "True":
             file_name_avg = "YCSB_"+load_run_flag+"_"+arg0+"_"+arg1+".txt"
             #file_name_avg = "YCSB_"+load_run_flag+"_"+arg0+"_"+arg1+"_noLongAdder.txt"
 
-            file = open(file_name, "r")
+            if flag_append:
+                os.remove(file_name_avg)
+                flag_append = False
 
-            file_avg = open(file_name_avg, flag_append)
+            file = open(file_name, "r")
 
             values = []
 
@@ -51,6 +54,8 @@ if flag_avg == "True":
                 val = float(line.split(" ")[2])
                 values.append(val)
 
+
+            file_avg = open(file_name_avg, flag_append)
             mean, upper_bound, lower_bound, max_value, min_value = calculate_bounds(values)
 
             file_avg.write(nb + " " + str(mean) + " " + str(upper_bound)+ " " + str(lower_bound) + " " + str(max_value) + " " + str(min_value) + "\n")
