@@ -3,17 +3,20 @@ import os
 
 
 def calculate_bounds(values_func):
-    # Calcul de la moyenne
+    # Calcul de la moyenne, du max et du min
     mean_func = sum(values_func) / len(values_func)
+    max_value_func = max(values_func)
+    min_value_func = min(values_func)
 
-    # Calcul de l'écart maximal entre la moyenne et les valeurs
-    max_deviation = max(abs(value - mean_func) for value in values_func)
+    # Création des listes qui contiennent les valeurs supérieur ou inférieur à la moyenne
+    values_sup_mean = [value for value in values_func if value >= mean_func]
+    values_inf_mean = [value for value in values_func if value < mean_func]
 
     # Calcul de la borne supérieure et inférieure
-    upper_bound_func = mean_func + max_deviation
-    lower_bound_func = mean_func - max_deviation
+    upper_bound_func = sum(values_sup_mean) / len(values_sup_mean)
+    lower_bound_func = sum(values_inf_mean) / len(values_inf_mean)
 
-    return mean_func, upper_bound_func, lower_bound_func
+    return mean_func, upper_bound_func, lower_bound_func, max_value_func, min_value_func
 
 
 YCSB_file_name = sys.argv[1]
@@ -50,9 +53,9 @@ if flag_avg == "True":
                 val = float(line.split(" ")[2])
                 values.append(val)
 
-            mean, upper_bound, lower_bound = calculate_bounds(values)
+            mean, upper_bound, lower_bound, max_value, min_value = calculate_bounds(values)
 
-            file_avg.write(nb + " " + str(mean) + " " + str(upper_bound)+ " " + str(lower_bound) + "\n")
+            file_avg.write(nb + " " + str(mean) + " " + str(upper_bound)+ " " + str(lower_bound) + " " + max_value + " " + min_value + "\n")
 
             file.close()
             file_avg.close()
