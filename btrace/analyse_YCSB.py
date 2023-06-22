@@ -1,6 +1,21 @@
 import sys
 import os
 
+
+def calculate_bounds(values_func):
+    # Calcul de la moyenne
+    mean_func = sum(values_func) / len(values_func)
+
+    # Calcul de l'écart maximal entre la moyenne et les valeurs
+    max_deviation = max(abs(value - mean_func) for value in values_func)
+
+    # Calcul de la borne supérieure et inférieure
+    upper_bound_func = mean_func + max_deviation
+    lower_bound_func = mean_func - max_deviation
+
+    return mean_func, upper_bound_func, lower_bound_func
+
+
 YCSB_file_name = sys.argv[1]
 flag_avg = sys.argv[2]
 load_run_flag = sys.argv[3]
@@ -29,15 +44,15 @@ if flag_avg == "True":
             else:
                 file_avg = open(file_name_avg, "a")
 
-            sum = 0
-            nb_test = 0
+            values = []
 
             for line in file.readlines():
                 val = float(line.split(" ")[2])
-                sum += val
-                nb_test += 1
+                values.append(val)
 
-            file_avg.write(nb + " " + str(sum/nb_test) + "\n")
+            mean, upper_bound, lower_bound = calculate_bounds(values)
+
+            file_avg.write(nb + " " + str(mean) + " " + str(upper_bound)+ " " + str(lower_bound) + "\n")
 
             file.close()
             file_avg.close()
