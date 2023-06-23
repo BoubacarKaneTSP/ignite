@@ -42,9 +42,15 @@ if flag_avg == "True":
             file_name_avg = "YCSB_"+load_run_flag+"_"+arg0+"_"+arg1+".txt"
             #file_name_avg = "YCSB_"+load_run_flag+"_"+arg0+"_"+arg1+"_noLongAdder.txt"
 
-            if flag_append:
-                os.remove(file_name_avg)
-                flag_append = False
+            ##if flag_append:
+              ##  try:
+                ##    os.remove(file_name_avg)
+                  ##  flag_append = False
+                    ##print("Le fichier a été supprimé avec succès.")
+             ##   except FileNotFoundError:
+               ##     print("Le fichier n'existe pas.")
+               ## except Exception as e:
+                 ##   print(f"Une erreur s'est produite : {str(e)}")
 
             file = open(file_name, "r")
 
@@ -55,7 +61,7 @@ if flag_avg == "True":
                 values.append(val)
 
 
-            file_avg = open(file_name_avg, flag_append)
+            file_avg = open(file_name_avg, "a")
             mean, upper_bound, lower_bound, max_value, min_value = calculate_bounds(values)
 
             file_avg.write(nb + " " + str(mean) + " " + str(upper_bound)+ " " + str(lower_bound) + " " + str(max_value) + " " + str(min_value) + "\n")
