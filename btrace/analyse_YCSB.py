@@ -42,16 +42,6 @@ if flag_avg == "True":
             file_name_avg = "YCSB_"+load_run_flag+"_"+arg0+"_"+arg1+".txt"
             #file_name_avg = "YCSB_"+load_run_flag+"_"+arg0+"_"+arg1+"_noLongAdder.txt"
 
-            ##if flag_append:
-              ##  try:
-                ##    os.remove(file_name_avg)
-                  ##  flag_append = False
-                    ##print("Le fichier a été supprimé avec succès.")
-             ##   except FileNotFoundError:
-               ##     print("Le fichier n'existe pas.")
-               ## except Exception as e:
-                 ##   print(f"Une erreur s'est produite : {str(e)}")
-
             file = open(file_name, "r")
 
             values = []
@@ -81,7 +71,7 @@ else:
             arg0 = arg.split("-")[0]
             arg1 = arg.split("-")[1]
             file_name = "YCSB_"+load_run_flag+"_"+arg0+"_"+arg1+"_"+nb_client+"_clients.txt"
-           # file_name = "YCSB_"+load_run_flag+"_"+arg0+"_"+arg1+"_"+nb_client+"_clients_noLongAdder.txt"
+            #file_name = "YCSB_"+load_run_flag+"_"+arg0+"_"+arg1+"_"+nb_client+"_clients_noLongAdder.txt"
 
             if arg0 in line and arg1 in line:
 
