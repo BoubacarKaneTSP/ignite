@@ -15,6 +15,10 @@ operationcount=10000000
 recordcount=1000000
 output_file_load="outputload.txt"
 output_file_run="outputrun.txt"
+load_type="LOAD"
+#load_type="LOAD_no_LongAdder"
+run_type="RUN"
+#run_type="RUN_no_Long_adder"
 
 flag_append="w"
 
@@ -35,10 +39,14 @@ do
     echo "====> test num [$c] with [$nb_client] client(s)"
     echo " "
     echo " "
-    python2 $YCSB_HOME/bin/ycsb load ignite -p hosts=$hosts -s -P $YCSB_HOME/workloads/$workload -threads $nb_client -p operationcount=$operationcount -p recordcount=$recordcount > $IGNITE_HOME/$output_file_load
+
+    perf stat --no-big-num -d -e cache-references,cache-misses,branches,branch-misses,cycles,instructions,l1d_pend_miss.pending_cycles_any,l2_rqsts.all_demand_miss,cycle_activity.stalls_total -o perf.log python2 $YCSB_HOME/bin/ycsb load ignite -p hosts=$hosts -s -P $YCSB_HOME/workloads/$workload -threads $nb_client -p operationcount=$operationcount -p recordcount=$recordcount > $IGNITE_HOME/$output_file_load
+    python3 $IGNITE_HOME/btrace/analyse_perf.py $IGNITE_HOME/btrace/perf.log "false" $load_type $nb_client
     python3 $IGNITE_HOME/btrace/analyse_YCSB.py $IGNITE_HOME/$output_file_load False $flag_append load $nb_client $list_stat
 
-    python2 $YCSB_HOME/bin/ycsb run ignite -p hosts=$hosts -s -P $YCSB_HOME/workloads/$workload -threads $nb_client -p operationcount=$operationcount -p recordcount=$recordcount > $IGNITE_HOME/$output_file_run
+
+    perf stat --no-big-num -d -e cache-references,cache-misses,branches,branch-misses,cycles,instructions,l1d_pend_miss.pending_cycles_any,l2_rqsts.all_demand_miss,cycle_activity.stalls_total -o perf.log python2 $YCSB_HOME/bin/ycsb run ignite -p hosts=$hosts -s -P $YCSB_HOME/workloads/$workload -threads $nb_client -p operationcount=$operationcount -p recordcount=$recordcount > $IGNITE_HOME/$output_file_run
+    python3 $IGNITE_HOME/btrace/analyse_perf.py $IGNITE_HOME/btrace/perf.log "false" $run_type $nb_client
     python3 $IGNITE_HOME/btrace/analyse_YCSB.py $IGNITE_HOME/$output_file_run False $flag_append run $nb_client $list_stat
     
     if [ $flag_append = "w" ]; then
@@ -52,5 +60,8 @@ done
 # Make sure that the nb of client match those computed
 python3 $IGNITE_HOME/btrace/analyse_YCSB.py $IGNITE_HOME/$output_file_load True $flag_append load "$clients" $list_stat
 python3 $IGNITE_HOME/btrace/analyse_YCSB.py $IGNITE_HOME/$output_file_run True $flag_append run "$clients" $list_stat
+
+python3 $IGNITE_HOME/btrace/analyse_perf.py $IGNITE_HOME/btrace/perf.log "true" $load_type $nb_client
+python3 $IGNITE_HOME/btrace/analyse_perf.py $IGNITE_HOME/btrace/perf.log "true" $run_type $nb_client
 
 cd $IGNITE_HOME/btrace
