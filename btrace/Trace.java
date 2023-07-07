@@ -10,14 +10,14 @@ import static org.openjdk.btrace.core.BTraceUtils.*;
     private static Aggregation methodDuration = Aggregations
 	.newAggregation(AggregationFunction.AVERAGE);
    
-    @OnMethod(clazz="/org\\.apache\\.ignite\\.internal\\.util\\.StripedExecutor",
-	method="/take/",
+    @OnMethod(clazz="/org\\.apache\\.ignite\\.util\\.deque\\.FastSizeDeque",
+	method="/sizex/",
 	location = @Location(Kind.RETURN))
     public static void addMethodDuration(@Duration long duration) {
 	Aggregations.addToAggregation(methodDuration, duration);
     }
 
-    @OnTimer(value = 1000)
+    @OnTimer(value = 10000)
     public static void printAvgMethodDuration() {
 	Aggregations.printAggregation("Average method duration (ms)", methodDuration);
     }

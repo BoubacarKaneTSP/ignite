@@ -92,7 +92,7 @@ fi
 # ADD YOUR/CHANGE ADDITIONAL OPTIONS HERE
 #
 if [ -z "$JVM_OPTS" ] ; then
-    JVM_OPTS="-Xms1g -Xmx1g -server -XX:MaxMetaspaceSize=256m"
+    JVM_OPTS="btracer -o outputBtrace.txt ../btrace/Trace.class -Xms1g -Xmx1g -server -XX:MaxMetaspaceSize=256m"
 fi
 
 #
