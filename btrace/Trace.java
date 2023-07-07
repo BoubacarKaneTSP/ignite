@@ -38,6 +38,7 @@ import org.openjdk.btrace.core.annotations.Kind;
 
 import org.openjdk.btrace.core.BTraceUtils.Aggregations;
 import org.openjdk.btrace.core.aggregation.Aggregation;
+import org.openjdk.btrace.core.aggregation.AggregationResult;
 import org.openjdk.btrace.core.aggregation.AggregationFunction;
 
 import static org.openjdk.btrace.core.BTraceUtils.*;
@@ -88,7 +89,8 @@ public class TestMethods {
      */
     @OnTimer(value = 10000)
     public static void printAvgMethodDuration() {
+        AggregationResult result = Aggregations.getAggregation(methodDuration);
         Aggregations.printAggregation(
-                "Average method duration (ms)", methodDuration);
+                "Average method duration (ms)", result);
     }
 }
