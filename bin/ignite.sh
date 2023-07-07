@@ -97,6 +97,7 @@ if [ -z "$JVM_OPTS" ] || [ "$JVM_OPTS" == "-Dfile.encoding=UTF-8" ] ; then
     JVM_OPTS="btracer -o outputBtrace.txt ../btrace/Trace.class -Xms1g -Xmx1g -server -XX:MaxMetaspaceSize=256m"
 else
   echo "No JVM options"
+  echo "$JVM_OPTS"
 fi
 
 #
