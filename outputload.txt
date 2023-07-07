@@ -1,224 +1,72 @@
-[16:02:44][INFO ][Thread-45] Start Ignite client.
-[16:02:44][INFO ][Thread-175] Start Ignite client.
-[16:02:44][INFO ][Thread-27] Start Ignite client.
-[16:02:44][INFO ][Thread-64] Start Ignite client.
-[16:02:44][INFO ][Thread-33] Start Ignite client.
-[16:02:44][INFO ][Thread-158] Start Ignite client.
-[16:02:44][INFO ][Thread-116] Start Ignite client.
-[16:02:44][INFO ][Thread-32] Start Ignite client.
-[16:02:44][INFO ][Thread-127] Start Ignite client.
-[16:02:44][INFO ][Thread-56] Start Ignite client.
-[16:02:44][INFO ][Thread-153] Start Ignite client.
-[16:02:44][INFO ][Thread-142] Start Ignite client.
-[16:02:44][INFO ][Thread-177] Start Ignite client.
-[16:02:44][INFO ][Thread-178] Start Ignite client.
-[16:02:44][INFO ][Thread-108] Start Ignite client.
-[16:02:44][INFO ][Thread-87] Start Ignite client.
-[16:02:44][INFO ][Thread-129] Start Ignite client.
-[16:02:44][INFO ][Thread-70] Start Ignite client.
-[16:02:44][INFO ][Thread-16] Start Ignite client.
-[16:02:44][INFO ][Thread-82] Start Ignite client.
-[16:02:44][INFO ][Thread-186] Start Ignite client.
-[16:02:44][INFO ][Thread-10] Start Ignite client.
-[16:02:44][INFO ][Thread-78] Start Ignite client.
-[16:02:44][INFO ][Thread-149] Start Ignite client.
-[16:02:44][INFO ][Thread-31] Start Ignite client.
-[16:02:44][INFO ][Thread-117] Start Ignite client.
-[16:02:44][INFO ][Thread-114] Start Ignite client.
-[16:02:44][INFO ][Thread-75] Start Ignite client.
-[16:02:44][INFO ][Thread-15] Start Ignite client.
-[16:02:44][INFO ][Thread-181] Start Ignite client.
-[16:02:44][INFO ][Thread-144] Start Ignite client.
-[16:02:44][INFO ][Thread-21] Start Ignite client.
-[16:02:44][INFO ][Thread-201] Start Ignite client.
-[16:02:44][INFO ][Thread-145] Start Ignite client.
-[16:02:44][INFO ][Thread-53] Start Ignite client.
-[16:02:44][INFO ][Thread-126] Start Ignite client.
-[16:02:44][INFO ][Thread-159] Start Ignite client.
-[16:02:44][INFO ][Thread-187] Start Ignite client.
-[16:02:44][INFO ][Thread-162] Start Ignite client.
-[16:02:44][INFO ][Thread-182] Start Ignite client.
-[16:02:44][INFO ][Thread-176] Start Ignite client.
-[16:02:44][INFO ][Thread-23] Start Ignite client.
-[16:02:44][INFO ][Thread-130] Start Ignite client.
-[16:02:44][INFO ][Thread-39] Start Ignite client.
-[16:02:44][INFO ][Thread-35] Start Ignite client.
-[16:02:44][INFO ][Thread-197] Start Ignite client.
-[16:02:44][INFO ][Thread-160] Start Ignite client.
-[16:02:44][INFO ][Thread-189] Start Ignite client.
-[16:02:44][INFO ][Thread-123] Start Ignite client.
-[16:02:44][INFO ][Thread-88] Start Ignite client.
-[16:02:44][INFO ][Thread-174] Start Ignite client.
-[16:02:44][INFO ][Thread-104] Start Ignite client.
-[16:02:44][INFO ][Thread-14] Start Ignite client.
-[16:02:44][INFO ][Thread-169] Start Ignite client.
-[16:02:44][INFO ][Thread-9] Start Ignite client.
-[16:02:44][INFO ][Thread-115] Start Ignite client.
-[16:02:44][INFO ][Thread-119] Start Ignite client.
-[16:02:44][INFO ][Thread-180] Start Ignite client.
-[16:02:44][INFO ][Thread-139] Start Ignite client.
-[16:02:44][INFO ][Thread-154] Start Ignite client.
-[16:02:44][INFO ][Thread-90] Start Ignite client.
-[16:02:44][INFO ][Thread-140] Start Ignite client.
-[16:02:44][INFO ][Thread-12] Start Ignite client.
-[16:02:44][INFO ][Thread-55] Start Ignite client.
-[16:02:44][INFO ][Thread-190] Start Ignite client.
-[16:02:44][INFO ][Thread-49] Start Ignite client.
-[16:02:44][INFO ][Thread-68] Start Ignite client.
-[16:02:44][INFO ][Thread-183] Start Ignite client.
-[16:02:44][INFO ][Thread-141] Start Ignite client.
-[16:02:44][INFO ][Thread-112] Start Ignite client.
-[16:02:44][INFO ][Thread-30] Start Ignite client.
-[16:02:44][INFO ][Thread-66] Start Ignite client.
-[16:02:44][INFO ][Thread-61] Start Ignite client.
-[16:02:44][INFO ][Thread-28] Start Ignite client.
-[16:02:44][INFO ][Thread-110] Start Ignite client.
-[16:02:44][INFO ][Thread-101] Start Ignite client.
-[16:02:44][INFO ][Thread-200] Start Ignite client.
-[16:02:44][INFO ][Thread-155] Start Ignite client.
-[16:02:44][INFO ][Thread-62] Start Ignite client.
-[16:02:44][INFO ][Thread-74] Start Ignite client.
-[16:02:44][INFO ][Thread-106] Start Ignite client.
-[16:02:44][INFO ][Thread-111] Start Ignite client.
-[16:02:44][INFO ][Thread-98] Start Ignite client.
-[16:02:44][INFO ][Thread-102] Start Ignite client.
-[16:02:44][INFO ][Thread-118] Start Ignite client.
-[16:02:44][INFO ][Thread-71] Start Ignite client.
-[16:02:44][INFO ][Thread-7] Start Ignite client.
-[16:02:44][INFO ][Thread-38] Start Ignite client.
-[16:02:44][INFO ][Thread-107] Start Ignite client.
-[16:02:44][INFO ][Thread-168] Start Ignite client.
-[16:02:44][INFO ][Thread-124] Start Ignite client.
-[16:02:44][INFO ][Thread-92] Start Ignite client.
-[16:02:44][INFO ][Thread-83] Start Ignite client.
-[16:02:44][INFO ][Thread-5] Start Ignite client.
-[16:02:44][INFO ][Thread-85] Start Ignite client.
-[16:02:44][INFO ][Thread-133] Start Ignite client.
-[16:02:44][INFO ][Thread-165] Start Ignite client.
-[16:02:44][INFO ][Thread-96] Start Ignite client.
-[16:02:44][INFO ][Thread-194] Start Ignite client.
-[16:02:44][INFO ][Thread-29] Start Ignite client.
-[16:02:44][INFO ][Thread-81] Start Ignite client.
-[16:02:44][INFO ][Thread-151] Start Ignite client.
-[16:02:44][INFO ][Thread-191] Start Ignite client.
-[16:02:44][INFO ][Thread-170] Start Ignite client.
-[16:02:44][INFO ][Thread-105] Start Ignite client.
-[16:02:44][INFO ][Thread-40] Start Ignite client.
-[16:02:44][INFO ][Thread-22] Start Ignite client.
-[16:02:44][INFO ][Thread-167] Start Ignite client.
-[16:02:44][INFO ][Thread-52] Start Ignite client.
-[16:02:44][INFO ][Thread-63] Start Ignite client.
-[16:02:44][INFO ][Thread-89] Start Ignite client.
-[16:02:44][INFO ][Thread-134] Start Ignite client.
-[16:02:44][INFO ][Thread-161] Start Ignite client.
-[16:02:44][INFO ][Thread-72] Start Ignite client.
-[16:02:44][INFO ][Thread-157] Start Ignite client.
-[16:02:44][INFO ][Thread-163] Start Ignite client.
-[16:02:44][INFO ][Thread-77] Start Ignite client.
-[16:02:44][INFO ][Thread-80] Start Ignite client.
-[16:02:44][INFO ][Thread-99] Start Ignite client.
-[16:02:44][INFO ][Thread-120] Start Ignite client.
-[16:02:44][INFO ][Thread-19] Start Ignite client.
-[16:02:44][INFO ][Thread-146] Start Ignite client.
-[16:02:44][INFO ][Thread-143] Start Ignite client.
-[16:02:44][INFO ][Thread-18] Start Ignite client.
-[16:02:44][INFO ][Thread-47] Start Ignite client.
-[16:02:44][INFO ][Thread-156] Start Ignite client.
-[16:02:44][INFO ][Thread-185] Start Ignite client.
-[16:02:44][INFO ][Thread-100] Start Ignite client.
-[16:02:44][INFO ][Thread-137] Start Ignite client.
-[16:02:44][INFO ][Thread-25] Start Ignite client.
-[16:02:44][INFO ][Thread-109] Start Ignite client.
-[16:02:44][INFO ][Thread-36] Start Ignite client.
-[16:02:44][INFO ][Thread-57] Start Ignite client.
-[16:02:44][INFO ][Thread-73] Start Ignite client.
-[16:02:44][INFO ][Thread-184] Start Ignite client.
-[16:02:44][INFO ][Thread-69] Start Ignite client.
-[16:02:44][INFO ][Thread-135] Start Ignite client.
-[16:02:44][INFO ][Thread-76] Start Ignite client.
-[16:02:44][INFO ][Thread-50] Start Ignite client.
-[16:02:44][INFO ][Thread-131] Start Ignite client.
-[16:02:44][INFO ][Thread-13] Start Ignite client.
-[16:02:44][INFO ][Thread-42] Start Ignite client.
-[16:02:44][INFO ][Thread-192] Start Ignite client.
-[16:02:44][INFO ][Thread-44] Start Ignite client.
-[16:02:44][INFO ][Thread-65] Start Ignite client.
-[16:02:44][INFO ][Thread-193] Start Ignite client.
-[16:02:44][INFO ][Thread-132] Start Ignite client.
-[16:02:44][INFO ][Thread-103] Start Ignite client.
-[16:02:44][INFO ][Thread-60] Start Ignite client.
-[16:02:44][INFO ][Thread-94] Start Ignite client.
-[16:02:44][INFO ][Thread-17] Start Ignite client.
-[16:02:44][INFO ][Thread-41] Start Ignite client.
-[16:02:44][INFO ][Thread-20] Start Ignite client.
-[16:02:44][INFO ][Thread-58] Start Ignite client.
-[16:02:44][INFO ][Thread-173] Start Ignite client.
-[16:02:44][INFO ][Thread-152] Start Ignite client.
-[16:02:44][INFO ][Thread-84] Start Ignite client.
-[16:02:44][INFO ][Thread-54] Start Ignite client.
-[16:02:44][INFO ][Thread-122] Start Ignite client.
-[16:02:44][INFO ][Thread-34] Start Ignite client.
-[16:02:44][INFO ][Thread-67] Start Ignite client.
-[16:02:44][INFO ][Thread-147] Start Ignite client.
-[16:02:44][INFO ][Thread-93] Start Ignite client.
-[16:02:44][INFO ][Thread-95] Start Ignite client.
-[16:02:44][INFO ][Thread-164] Start Ignite client.
-[16:02:44][INFO ][Thread-172] Start Ignite client.
-[16:02:44][INFO ][Thread-8] Start Ignite client.
-[16:02:44][INFO ][Thread-86] Start Ignite client.
-[16:02:44][INFO ][Thread-97] Start Ignite client.
-[16:02:44][INFO ][Thread-196] Start Ignite client.
-[16:02:44][INFO ][Thread-24] Start Ignite client.
-[16:02:44][INFO ][Thread-128] Start Ignite client.
-[16:02:44][INFO ][Thread-171] Start Ignite client.
-[16:02:44][INFO ][Thread-59] Start Ignite client.
-[16:02:44][INFO ][Thread-188] Start Ignite client.
-[16:02:44][INFO ][Thread-79] Start Ignite client.
-[16:02:44][INFO ][Thread-26] Start Ignite client.
-[16:02:44][INFO ][Thread-136] Start Ignite client.
-[16:02:44][INFO ][Thread-6] Start Ignite client.
-[16:02:44][INFO ][Thread-48] Start Ignite client.
-[16:02:44][INFO ][Thread-166] Start Ignite client.
-[16:02:44][INFO ][Thread-121] Start Ignite client.
-[16:02:44][INFO ][Thread-150] Start Ignite client.
-[16:02:44][INFO ][Thread-11] Start Ignite client.
-[16:02:44][INFO ][Thread-4] Start Ignite client.
-[16:02:44][INFO ][Thread-43] Start Ignite client.
-[16:02:44][INFO ][Thread-198] Start Ignite client.
-[16:02:44][INFO ][Thread-199] Start Ignite client.
-[16:02:44][INFO ][Thread-125] Start Ignite client.
-[16:02:44][INFO ][Thread-91] Start Ignite client.
-[16:02:44][INFO ][Thread-37] Start Ignite client.
-[16:02:44][INFO ][Thread-195] Start Ignite client.
-[16:02:44][INFO ][Thread-148] Start Ignite client.
-[16:02:44][INFO ][Thread-113] Start Ignite client.
-[16:02:44][INFO ][Thread-3] Start Ignite client.
-[16:02:44][INFO ][Thread-51] Start Ignite client.
-[16:02:44][INFO ][Thread-138] Start Ignite client.
-[16:02:44][INFO ][Thread-202] Start Ignite client.
-[16:02:44][INFO ][Thread-46] Start Ignite client.
-[16:02:44][INFO ][Thread-179] Start Ignite client.
-[OVERALL], RunTime(ms), 5108
-[OVERALL], Throughput(ops/sec), 195771.3390759593
-[TOTAL_GCS_PS_Scavenge], Count, 13
-[TOTAL_GC_TIME_PS_Scavenge], Time(ms), 90
-[TOTAL_GC_TIME_%_PS_Scavenge], Time(%), 1.7619420516836335
-[TOTAL_GCS_PS_MarkSweep], Count, 1
-[TOTAL_GC_TIME_PS_MarkSweep], Time(ms), 45
-[TOTAL_GC_TIME_%_PS_MarkSweep], Time(%), 0.8809710258418167
-[TOTAL_GCs], Count, 14
-[TOTAL_GC_TIME], Time(ms), 135
-[TOTAL_GC_TIME_%], Time(%), 2.64291307752545
-[CLEANUP], Operations, 200
-[CLEANUP], AverageLatency(us), 1.135
+[10:37:38][INFO ][Thread-24] Start Ignite client.
+[10:37:38][INFO ][Thread-26] Start Ignite client.
+[10:37:38][INFO ][Thread-42] Start Ignite client.
+[10:37:38][INFO ][Thread-8] Start Ignite client.
+[10:37:38][INFO ][Thread-49] Start Ignite client.
+[10:37:38][INFO ][Thread-14] Start Ignite client.
+[10:37:38][INFO ][Thread-45] Start Ignite client.
+[10:37:38][INFO ][Thread-3] Start Ignite client.
+[10:37:38][INFO ][Thread-43] Start Ignite client.
+[10:37:38][INFO ][Thread-35] Start Ignite client.
+[10:37:38][INFO ][Thread-6] Start Ignite client.
+[10:37:38][INFO ][Thread-48] Start Ignite client.
+[10:37:38][INFO ][Thread-29] Start Ignite client.
+[10:37:38][INFO ][Thread-47] Start Ignite client.
+[10:37:38][INFO ][Thread-15] Start Ignite client.
+[10:37:38][INFO ][Thread-25] Start Ignite client.
+[10:37:38][INFO ][Thread-40] Start Ignite client.
+[10:37:38][INFO ][Thread-38] Start Ignite client.
+[10:37:38][INFO ][Thread-4] Start Ignite client.
+[10:37:38][INFO ][Thread-5] Start Ignite client.
+[10:37:38][INFO ][Thread-11] Start Ignite client.
+[10:37:38][INFO ][Thread-23] Start Ignite client.
+[10:37:38][INFO ][Thread-7] Start Ignite client.
+[10:37:38][INFO ][Thread-28] Start Ignite client.
+[10:37:38][INFO ][Thread-32] Start Ignite client.
+[10:37:38][INFO ][Thread-39] Start Ignite client.
+[10:37:38][INFO ][Thread-27] Start Ignite client.
+[10:37:38][INFO ][Thread-21] Start Ignite client.
+[10:37:38][INFO ][Thread-19] Start Ignite client.
+[10:37:38][INFO ][Thread-9] Start Ignite client.
+[10:37:38][INFO ][Thread-36] Start Ignite client.
+[10:37:38][INFO ][Thread-46] Start Ignite client.
+[10:37:38][INFO ][Thread-31] Start Ignite client.
+[10:37:38][INFO ][Thread-18] Start Ignite client.
+[10:37:38][INFO ][Thread-50] Start Ignite client.
+[10:37:38][INFO ][Thread-13] Start Ignite client.
+[10:37:38][INFO ][Thread-16] Start Ignite client.
+[10:37:38][INFO ][Thread-37] Start Ignite client.
+[10:37:38][INFO ][Thread-22] Start Ignite client.
+[10:37:38][INFO ][Thread-44] Start Ignite client.
+[10:37:38][INFO ][Thread-41] Start Ignite client.
+[10:37:38][INFO ][Thread-10] Start Ignite client.
+[10:37:38][INFO ][Thread-20] Start Ignite client.
+[10:37:38][INFO ][Thread-33] Start Ignite client.
+[10:37:38][INFO ][Thread-17] Start Ignite client.
+[10:37:38][INFO ][Thread-12] Start Ignite client.
+[10:37:38][INFO ][Thread-30] Start Ignite client.
+[10:37:38][INFO ][Thread-34] Start Ignite client.
+[OVERALL], RunTime(ms), 4142
+[OVERALL], Throughput(ops/sec), 241429.26122646066
+[TOTAL_GCS_PS_Scavenge], Count, 8
+[TOTAL_GC_TIME_PS_Scavenge], Time(ms), 77
+[TOTAL_GC_TIME_%_PS_Scavenge], Time(%), 1.8590053114437468
+[TOTAL_GCS_PS_MarkSweep], Count, 0
+[TOTAL_GC_TIME_PS_MarkSweep], Time(ms), 0
+[TOTAL_GC_TIME_%_PS_MarkSweep], Time(%), 0.0
+[TOTAL_GCs], Count, 8
+[TOTAL_GC_TIME], Time(ms), 77
+[TOTAL_GC_TIME_%], Time(%), 1.8590053114437468
+[CLEANUP], Operations, 48
+[CLEANUP], AverageLatency(us), 0.375
 [CLEANUP], MinLatency(us), 0
-[CLEANUP], MaxLatency(us), 31
-[CLEANUP], 95thPercentileLatency(us), 2
-[CLEANUP], 99thPercentileLatency(us), 2
+[CLEANUP], MaxLatency(us), 6
+[CLEANUP], 95thPercentileLatency(us), 1
+[CLEANUP], 99thPercentileLatency(us), 6
 [INSERT], Operations, 1000000
-[INSERT], AverageLatency(us), 808.933426
-[INSERT], MinLatency(us), 57
-[INSERT], MaxLatency(us), 184447
-[INSERT], 95thPercentileLatency(us), 1934
-[INSERT], 99thPercentileLatency(us), 2955
+[INSERT], AverageLatency(us), 174.539166
+[INSERT], MinLatency(us), 52
+[INSERT], MaxLatency(us), 53183
+[INSERT], 95thPercentileLatency(us), 284
+[INSERT], 99thPercentileLatency(us), 573
 [INSERT], Return=OK, 1000000

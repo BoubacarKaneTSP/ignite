@@ -20,11 +20,26 @@ cd $YCSB_HOME
 python2 $YCSB_HOME/bin/ycsb load ignite -p hosts=$hosts -s -P $YCSB_HOME/workloads/$workload -threads $nb_client -p operationcount=$operationcount -p recordcount=$recordcount > $IGNITE_HOME/$output_file_load
 python2 $YCSB_HOME/bin/ycsb run ignite -p hosts=$hosts -s -P $YCSB_HOME/workloads/$workload -threads $nb_client -p operationcount=$operationcount -p recordcount=$recordcount > $IGNITE_HOME/$output_file_run &
 
+sleep 5
+ycsb_pid=$!
+
 cd $ASYNC_PROFILER_HOME
+
+sleep 5
 
 val=$(ps -ef | grep java | tail -n 3 | head -n 1 | grep -o -E '\b\w+\b' | sed -n '2p')
 
-./build/bin/asprof -f $YCSB_HOME/flameGraph_YCSB.html $val
+echo "==========================================================> $val"
+echo "==========================================================> "
+
+pid=$$
+echo $$
+
+echo "ycsb pid : $ycsb_pid"
+pgrep -P $pid
+
+./build/bin/asprof -d 300 -f $YCSB_HOME/results/flameGraph_YCSB.html $val
+#./build/bin/asprof -d 300 -f $YCSB_HOME/results/flameGraph_YCSB_no_LongAdder.html $val
 
 wait
 cd $IGNITE_HOME/btrace
