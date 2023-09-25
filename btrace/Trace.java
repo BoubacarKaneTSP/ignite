@@ -89,8 +89,7 @@ public class TestMethods {
      */
     @OnTimer(value = 10000)
     public static void printAvgMethodDuration() {
-        AggregationResult result = Aggregations.getAggregation(methodDuration);
         Aggregations.printAggregation(
-                "Average method duration (ms)", result);
+                "Average method duration (ms)", methodDuration);
     }
 }

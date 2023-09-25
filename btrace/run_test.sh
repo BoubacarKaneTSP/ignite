@@ -4,7 +4,7 @@
 trap "pkill -KILL -P $$; exit 255" SIGINT SIGTERM
 trap "trap - SIGTERM && kill -- -$$" SIGINT SIGTERM EXIT
 
-nbTest=20
+nbTest=30
 #clients="1 10 20 30 40 50 60 70 80 90 100 110 120 130 140 150 160 170 180 190 200"
 clients="90 110 130 150 170 190 200"
 #clients="1 2 4 8 16 32 48 96"
@@ -58,10 +58,10 @@ done
 
 
 # Make sure that the nb of client match those computed
-python3 $IGNITE_HOME/btrace/analyse_YCSB.py $IGNITE_HOME/$output_file_load True $flag_append load "$clients" $list_stat
-python3 $IGNITE_HOME/btrace/analyse_YCSB.py $IGNITE_HOME/$output_file_run True $flag_append run "$clients" $list_stat
-
-python3 $IGNITE_HOME/btrace/analyse_perf.py $IGNITE_HOME/btrace/perf.log "true" $load_type $nb_client
-python3 $IGNITE_HOME/btrace/analyse_perf.py $IGNITE_HOME/btrace/perf.log "true" $run_type $nb_client
+#python3 $IGNITE_HOME/btrace/analyse_YCSB.py $IGNITE_HOME/$output_file_load True $flag_append load "$clients" $list_stat
+#python3 $IGNITE_HOME/btrace/analyse_YCSB.py $IGNITE_HOME/$output_file_run True $flag_append run "$clients" $list_stat
+#
+#python3 $IGNITE_HOME/btrace/analyse_perf.py $IGNITE_HOME/btrace/perf.log "true" $load_type $nb_client
+#python3 $IGNITE_HOME/btrace/analyse_perf.py $IGNITE_HOME/btrace/perf.log "true" $run_type $nb_client
 
 cd $IGNITE_HOME/btrace
