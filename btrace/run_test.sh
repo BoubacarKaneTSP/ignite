@@ -11,15 +11,15 @@ clients="190"
 #clients="1 2 4 8 16 32 48 96"
 list_stat="OVERALL-RunTime OVERALL-Throughput"
 hosts="127.0.0.1"
-workload="workloadb"
+workload="workloada"
 operationcount=10000000
 recordcount=1000000
 output_file_load="outputload.txt"
 output_file_run="outputrun.txt"
 #load_type="LOAD"
-load_type="LOAD_no_LongAdder"
+load_type="LOAD_LongAdder"
 #run_type="RUN"
-run_type="RUN_no_Long_adder"
+run_type="RUN_Long_adder"
 
 flag_append="w"
 
