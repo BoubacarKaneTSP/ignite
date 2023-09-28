@@ -24,7 +24,8 @@ flag_avg = sys.argv[2]
 num_first_process = sys.argv[3]
 load_run_flag = sys.argv[4]
 nb_client = sys.argv[5]
-list_args = sys.argv[6:len(sys.argv)]
+workload = sys.argv[6]
+list_args = sys.argv[7:len(sys.argv)]
 
 flag_append = True
 
@@ -37,10 +38,10 @@ if flag_avg == "True":
         for arg in list_args:
             arg0 = arg.split("-")[0]
             arg1 = arg.split("-")[1]
-            # file_name = "YCSB_"+load_run_flag+"_"+arg0+"_"+arg1+"_"+nb+"_clients.txt"
-            file_name = "YCSB_"+load_run_flag+"_"+arg0+"_"+arg1+"_"+nb+"_clients_noLongAdder.txt"
-            # file_name_avg = "YCSB_"+load_run_flag+"_"+arg0+"_"+arg1+".txt"
-            file_name_avg = "YCSB_"+load_run_flag+"_"+arg0+"_"+arg1+"_noLongAdder.txt"
+            # file_name = "YCSB_"+load_run_flag+"_"+arg0+"_"+arg1+"_"+nb+"_clients_"+workload+".txt"
+            file_name = "YCSB_"+load_run_flag+"_"+arg0+"_"+arg1+"_"+nb+"_clients_noLongAdder_"+workload+".txt"
+            # file_name_avg = "YCSB_"+load_run_flag+"_"+arg0+"_"+arg1+"_"+workload+".txt"
+            file_name_avg = "YCSB_"+load_run_flag+"_"+arg0+"_"+arg1+"_noLongAdder_"+workload+".txt"
 
             file = open(file_name, "r")
 
@@ -70,8 +71,8 @@ else:
 
             arg0 = arg.split("-")[0]
             arg1 = arg.split("-")[1]
-            # file_name = "YCSB_"+load_run_flag+"_"+arg0+"_"+arg1+"_"+nb_client+"_clients.txt"
-            file_name = "YCSB_"+load_run_flag+"_"+arg0+"_"+arg1+"_"+nb_client+"_clients_noLongAdder.txt"
+            # file_name = "YCSB_"+load_run_flag+"_"+arg0+"_"+arg1+"_"+nb_client+"_clients_"+workload+".txt"
+            file_name = "YCSB_"+load_run_flag+"_"+arg0+"_"+arg1+"_"+nb_client+"_clients_noLongAdder_"+workload+".txt"
 
             if arg0 in line and arg1 in line:
 
