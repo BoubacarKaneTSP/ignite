@@ -12,7 +12,7 @@ clients="190"
 list_stat="OVERALL-RunTime OVERALL-Throughput"
 hosts="127.0.0.1"
 #workload="workloada"
-workloads="workloada workloadb workloadc workloadf workloadd"
+workloads="workloada" #workloadb workloadc workloadf workloadd"
 operationcount=10000000
 recordcount=1000000
 output_file_load="outputload.txt"
@@ -20,7 +20,7 @@ output_file_run="outputrun.txt"
 #load_type="LOAD"
 load_type="LOAD_LongAdder"
 #run_type="RUN"
-run_type="RUN_Long_adder"
+run_type="RUN_LongAdder"
 
 flag_append="w"
 
