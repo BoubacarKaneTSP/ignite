@@ -1,0 +1,11 @@
+### BTrace Log: 7/7/23 2:19 PM
+
+org.openjdk.btrace.core.aggregation.Aggregation@76fdb315
+
+Average method duration (ms)
+org.openjdk.btrace.core.aggregation.Aggregation@76fdb315
+
+Average method duration (ms)
+org.openjdk.btrace.core.aggregation.Aggregation@76fdb315
+
+Average method duration (ms)

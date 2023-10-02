@@ -38,10 +38,10 @@ if flag_avg == "True":
         for arg in list_args:
             arg0 = arg.split("-")[0]
             arg1 = arg.split("-")[1]
-            # file_name = "YCSB_"+load_run_flag+"_"+arg0+"_"+arg1+"_"+nb+"_clients_"+workload+".txt"
-            file_name = "YCSB_"+load_run_flag+"_"+arg0+"_"+arg1+"_"+nb+"_clients_noLongAdder_"+workload+".txt"
-            # file_name_avg = "YCSB_"+load_run_flag+"_"+arg0+"_"+arg1+"_"+workload+".txt"
-            file_name_avg = "YCSB_"+load_run_flag+"_"+arg0+"_"+arg1+"_noLongAdder_"+workload+".txt"
+            file_name = "YCSB_"+load_run_flag+"_"+arg0+"_"+arg1+"_"+nb+"_clients_"+workload+".txt"
+            #file_name = "YCSB_"+load_run_flag+"_"+arg0+"_"+arg1+"_"+nb+"_clients_noLongAdder_"+workload+".txt"
+            file_name_avg = "YCSB_"+load_run_flag+"_"+arg0+"_"+arg1+"_"+workload+".txt"
+            #file_name_avg = "YCSB_"+load_run_flag+"_"+arg0+"_"+arg1+"_noLongAdder_"+workload+".txt"
 
             file = open(file_name, "r")
 
@@ -71,8 +71,8 @@ else:
 
             arg0 = arg.split("-")[0]
             arg1 = arg.split("-")[1]
-            # file_name = "YCSB_"+load_run_flag+"_"+arg0+"_"+arg1+"_"+nb_client+"_clients_"+workload+".txt"
-            file_name = "YCSB_"+load_run_flag+"_"+arg0+"_"+arg1+"_"+nb_client+"_clients_noLongAdder_"+workload+".txt"
+            file_name = "YCSB_"+load_run_flag+"_"+arg0+"_"+arg1+"_"+nb_client+"_clients_"+workload+".txt"
+            #file_name = "YCSB_"+load_run_flag+"_"+arg0+"_"+arg1+"_"+nb_client+"_clients_noLongAdder_"+workload+".txt"
 
             if arg0 in line and arg1 in line:
 
